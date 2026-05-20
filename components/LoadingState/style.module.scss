@@ -1,0 +1,27 @@
+.loading {
+  border-top: 1px solid var(--color-border-soft);
+  padding: 1.5rem 2rem;
+}
+
+.row {
+  animation: pulse 1.2s ease-in-out infinite;
+  background: var(--color-soft);
+  border-radius: var(--radius-control);
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

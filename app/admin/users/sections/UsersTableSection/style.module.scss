@@ -1,0 +1,65 @@
+.table > div > div:first-child,
+.row {
+  grid-template-columns: 1.4fr 0.45fr 0.9fr 0.45fr;
+}
+
+.row {
+  align-items: center;
+  border-top: 1px solid var(--color-border-soft);
+  display: grid;
+  min-height: 4.75rem;
+  padding: 1rem 2rem;
+}
+
+.userCell {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.avatar {
+  align-items: center;
+  background: #123334;
+  border-radius: 999px;
+  color: var(--color-primary-contrast);
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.userCell strong,
+.userCell small {
+  display: block;
+}
+
+.userCell strong {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.userCell small {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.row > span {
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+}
+
+.actionsHead,
+.actions {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+}

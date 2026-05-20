@@ -1,0 +1,43 @@
+.table > div > div:first-child,
+.row {
+  grid-template-columns: 0.55fr 1.15fr 0.9fr 0.75fr 0.85fr 0.7fr;
+}
+
+.row {
+  align-items: center;
+  border-top: 1px solid var(--color-border-soft);
+  display: grid;
+  min-height: 5.75rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.row strong,
+.row small {
+  display: block;
+}
+
+.row strong {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.row small {
+  color: var(--color-muted-strong);
+  font-size: 0.75rem;
+}
+
+.id {
+  line-height: 1.25;
+}
+
+.actionsHead,
+.actions {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+}

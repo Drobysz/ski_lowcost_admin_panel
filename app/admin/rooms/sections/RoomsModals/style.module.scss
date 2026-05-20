@@ -1,0 +1,34 @@
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.confirm {
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.fileField {
+  color: var(--color-text);
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.fileField input {
+  background: var(--color-control);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-muted-strong);
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

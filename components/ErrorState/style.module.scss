@@ -1,0 +1,10 @@
+.error {
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-control);
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+}

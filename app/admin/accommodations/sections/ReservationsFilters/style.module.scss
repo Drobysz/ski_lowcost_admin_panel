@@ -1,0 +1,23 @@
+.filters {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 0.5fr 0.4fr 0.4fr auto;
+  margin-top: 2rem;
+  padding: 1.25rem;
+}
+
+@media (max-width: 1120px) {
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+}

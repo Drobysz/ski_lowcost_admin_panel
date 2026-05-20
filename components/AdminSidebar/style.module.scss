@@ -1,0 +1,112 @@
+.sidebar {
+  background: var(--color-sidebar);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 2rem 1.5rem;
+  width: 15rem;
+}
+
+.sidebar h1 {
+  color: var(--color-text);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.sidebar p {
+  color: var(--color-muted-strong);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 3.5rem;
+}
+
+.nav a {
+  align-items: center;
+  border-radius: 0.5rem;
+  color: var(--color-muted-strong);
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  gap: 0.75rem;
+  min-height: 2.5rem;
+  padding: 0 0.75rem;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav .active {
+  background: var(--color-surface);
+  box-shadow: 0 1px 6px rgb(15 23 42 / 5%);
+  color: var(--color-primary);
+}
+
+.profile {
+  margin-top: auto;
+}
+
+.divider {
+  background: var(--color-border);
+  height: 1px;
+  margin-bottom: 1.75rem;
+}
+
+.person {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.person > span {
+  align-items: center;
+  background: var(--color-text);
+  border-radius: 999px;
+  color: var(--color-primary-contrast);
+  display: inline-flex;
+  font-size: 0.75rem;
+  font-weight: 800;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+
+.person strong,
+.person small {
+  display: block;
+}
+
+.person strong {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.person small {
+  color: var(--color-muted-strong);
+  font-size: 0.75rem;
+}
+
+.profile button {
+  background: var(--color-sidebar);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-muted-strong);
+  cursor: pointer;
+  font-weight: 700;
+  height: 2.25rem;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    display: none;
+  }
+}

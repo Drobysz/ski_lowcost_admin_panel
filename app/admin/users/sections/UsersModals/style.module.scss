@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.confirm {
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.switchPrompt {
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-control);
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.switchPrompt p {
+  color: var(--color-text-soft);
+  font-weight: 700;
+}
+
+.switchPrompt button {
+  background: transparent;
+  border: 0;
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

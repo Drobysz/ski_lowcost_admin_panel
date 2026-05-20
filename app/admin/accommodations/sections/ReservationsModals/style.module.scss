@@ -1,0 +1,49 @@
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.confirm {
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.accommodations {
+  grid-column: 1 / -1;
+}
+
+.accommodationsHead {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.accommodationsHead p {
+  color: var(--color-text);
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.accommodationRow {
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-control);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0.75rem;
+  padding: 1rem;
+}
+
+.removeGuest {
+  align-self: end;
+}
+
+@media (max-width: 680px) {
+  .grid,
+  .accommodationRow {
+    grid-template-columns: 1fr;
+  }
+}

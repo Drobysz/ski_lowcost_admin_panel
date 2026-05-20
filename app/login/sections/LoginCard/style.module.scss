@@ -1,0 +1,76 @@
+.page {
+  background: var(--color-page);
+  min-height: 100vh;
+  padding: 2.5rem 1.5rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1.125rem;
+  box-shadow: 0 24px 80px rgb(15 23 42 / 8%);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  margin: 0 auto;
+  max-width: 72rem;
+  min-height: calc(100vh - 5rem);
+  overflow: hidden;
+}
+
+.brand {
+  background: var(--color-sidebar);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.brand p {
+  color: var(--color-muted-strong);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand h1 {
+  color: var(--color-text);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.02;
+  margin-top: 1rem;
+}
+
+.brand span,
+.brand small {
+  color: var(--color-muted-strong);
+}
+
+.brand span {
+  display: block;
+  line-height: 1.7;
+  margin-top: 1.25rem;
+  max-width: 24rem;
+}
+
+.brand small {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+}
+
+.formPanel {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+@media (max-width: 860px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    gap: 2rem;
+  }
+}
