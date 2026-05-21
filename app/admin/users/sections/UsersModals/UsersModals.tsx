@@ -119,7 +119,6 @@ function ClientForm({ record, readOnly }: ClientFormProps) {
       {!readOnly ? (
         <>
           <Input name="password" label="Password" type="password" required={!record} />
-          <Input name="password_confirmation" label="Confirm password" type="password" required={!record} />
         </>
       ) : null}
     </div>

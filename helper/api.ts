@@ -5,8 +5,12 @@ import type { Reservation } from "@/interface/reservation.interface";
 import type { Room } from "@/interface/room.interface";
 import { getAdminSession, setAdminSession } from "./auth";
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api";
+const NORMALIZED_API_BASE_URL = (
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api"
+).replace(/\/+$/, "");
+const API_BASE_URL = NORMALIZED_API_BASE_URL.endsWith("/api")
+  ? NORMALIZED_API_BASE_URL
+  : `${NORMALIZED_API_BASE_URL}/api`;
 
 type RequestOptions = RequestInit & {
   skipAuth?: boolean;

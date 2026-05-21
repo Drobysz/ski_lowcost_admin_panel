@@ -17,7 +17,6 @@ export const clientSchema = z.object({
   weight: z.coerce.number().min(0, "Weight is required."),
   shoe_size: z.coerce.number().min(0, "Shoe size is required."),
   password: z.string().optional(),
-  password_confirmation: z.string().optional(),
 });
 
 export const adminSchema = z.object({

@@ -6,8 +6,6 @@ import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import { adminLogin } from "@/helper/api";
 import {
-  canUseDemoLogin,
-  demoTokens,
   getAdminSession,
   setAdminSession,
 } from "@/helper/auth";
@@ -49,12 +47,6 @@ export function LoginForm() {
       setAdminSession(tokens, parsed.data.name);
       router.replace(ADMIN_ROUTES.users);
     } catch (loginError) {
-      if (canUseDemoLogin(parsed.data)) {
-        setAdminSession(demoTokens(), parsed.data.name);
-        router.replace(ADMIN_ROUTES.users);
-        return;
-      }
-
       setError(
         loginError instanceof Error
           ? loginError.message

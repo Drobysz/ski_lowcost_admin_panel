@@ -161,14 +161,13 @@ export function UsersProvider({ children }: UsersProviderProps) {
 
     if (modal?.mode === "create") {
       const password = String(formData.get("password") ?? "");
-      const confirmation = String(formData.get("password_confirmation") ?? "");
 
-      if (password.length < 8 || password !== confirmation) {
-        throw new Error("Password must be at least 8 characters and match confirmation.");
+      if (password.length < 8) {
+        throw new Error("Password must be at least 8 characters.");
       }
 
       const created = await withFallback(
-        () => createClient({ ...payload, password, password_confirmation: confirmation }),
+        () => createClient({ ...payload, password }),
         () => ({ ...payload, id: nextId(clients), role: "client" }) as Client,
       );
       setClients((items) => [created, ...items]);
