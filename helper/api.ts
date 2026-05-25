@@ -6,11 +6,11 @@ import type { Room } from "@/interface/room.interface";
 import { getAdminSession, setAdminSession } from "./auth";
 
 const NORMALIZED_API_BASE_URL = (
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api"
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/ski_lowcost_api"
 ).replace(/\/+$/, "");
-const API_BASE_URL = NORMALIZED_API_BASE_URL.endsWith("/api")
+const API_BASE_URL = NORMALIZED_API_BASE_URL.endsWith("/ski_lowcost_api")
   ? NORMALIZED_API_BASE_URL
-  : `${NORMALIZED_API_BASE_URL}/api`;
+  : `${NORMALIZED_API_BASE_URL}/ski_lowcost_api`;
 
 type RequestOptions = RequestInit & {
   skipAuth?: boolean;
